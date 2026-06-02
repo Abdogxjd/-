@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة الايميل المدرسي الموحد الذكية </title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+            background: #030712;
+            overflow-x: hidden;
+        }
+
+        /* حركات توهج خلفية فائقة الانسيابية */
+        .ambient-orb-1 {
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, rgba(0,0,0,0) 70%);
+            animation: float-orb-1 12s infinite ease-in-out;
+        }
+        .ambient-orb-2 {
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, rgba(0,0,0,0) 70%);
+            animation: float-orb-2 16s infinite ease-in-out;
+        }
+        .ambient-orb-3 {
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, rgba(0,0,0,0) 70%);
+            animation: float-orb-3 20s infinite ease-in-out;
+        }
+
+        @keyframes float-orb-1 {
+            0%, 100% { transform: translate(-30%, -30%) scale(1); }
+            50% { transform: translate(-10%, -10%) scale(1.2); }
+        }
+        @keyframes float-orb-2 {
+            0%, 100% { transform: translate(20%, 20%) scale(1.2); }
+            50% { transform: translate(5%, 5%) scale(0.9); }
+        }
+        @keyframes float-orb-3 {
+            0%, 100% { transform: translate(-10%, 40%) scale(0.9); }
+            50% { transform: translate(10%, 20%) scale(1.1); }
+        }
+
+        /* لوحة الزجاج الفاخرة */
+        .glass-luxury {
+            background: rgba(17, 24, 39, 0.65);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8),
+                        inset 0 1px 0px rgba(255, 255, 255, 0.1);
+        }
+
+        /* حركات ظهور خلابة للنتائج */
+        .reveal-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUpReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes slideUpReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* إخفاء شريط التمرير الافتراضي لحفظ جمال التصميم */
+        .scrollbar-hidden::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hidden {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* حركات نبض للأزرار */
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-glow::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+        .btn-glow:hover::after {
+            left: 120%;
+            transition: 0.5s ease-in-out;
+        }
+
+        /* حركيات وميض خفيفة للحدود الخارجي للخانة النشطة */
+        .premium-focus-ring:focus-within {
+            border-color: rgba(99, 102, 241, 0.6);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.25);
+        }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen flex flex-col items-center justify-center p-4 md:p-6 relative">
+
+    <!-- طبقات التوهج المحيطي الفاخر -->
+    <div class="absolute top-0 left-0 w-[50vw] h-[50vh] ambient-orb-1 pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-[60vw] h-[60vh] ambient-orb-2 pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vh] ambient-orb-3 pointer-events-none"></div>
+
+    <div class="w-full max-w-xl z-10 space-y-6 my-auto">
+        
+        <!-- البطاقة التفاعلية الرئيسية الاستثنائية -->
+        <div class="glass-luxury rounded-[2.5rem] p-6 md:p-10 transition-all duration-500 hover:border-white/10 relative overflow-hidden group">
+            
+            <!-- تأثير الخط المضيء العلوي للمسة مستقبلية زاهية -->
+            <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
+
+            <!-- رأس الصفحة الفخم جداً -->
+            <div class="text-center pb-6 border-b border-white/5 relative">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 mb-4 tracking-wide animate-pulse">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                    محافظة بني سويف
+                </div>
+                <h1 class="text-2xl md:text-4xl font-black bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent tracking-tight">
+                    الحساب المدرسي الموحد
+                </h1>
+                <p class="text-[11px] md:text-sm text-slate-400 mt-2 font-medium">
+                    استخراج ذكي ولحظي للبريد الإلكتروني الموحد وكلمات المرور
+                </p>
+            </div>
+
+            <!-- الاستمارة الذكية -->
+            <div class="pt-6 space-y-5">
+                
+                <!-- حقل الرقم القومي الرقمي الفاخر -->
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center">
+                        <label for="nationalId" class="text-xs md:text-sm font-semibold text-slate-300 flex items-center gap-2">
+                            <i data-lucide="fingerprint" class="w-4 h-4 text-indigo-400"></i>
+                            الرقم القومي للطالب
+                        </label>
+                        <span id="idLengthBadge" class="text-[10px] font-extrabold text-slate-500 bg-slate-900/80 px-2.5 py-1 rounded-full border border-white/5 transition-all duration-300">0 / 14 رقماً</span>
+                    </div>
+                    <div class="relative flex items-center rounded-2xl bg-slate-950/40 border border-white/5 transition-all duration-300 premium-focus-ring">
+                        <!-- تصفح آمن ومنع تداخل النصوص مع الأيقونات بفضل الحشوات الذكية pl-12 pr-4 -->
+                        <input 
+                            type="number" 
+                            id="nationalId" 
+                            placeholder="أدخل أول 7 أرقام على الأقل" 
+                            class="w-full bg-transparent pl-12 pr-4 py-3.5 text-white outline-none text-sm md:text-base font-bold placeholder:text-slate-500 placeholder:font-normal text-right transition-all"
+                            oninput="onFormChange()"
+                        >
+                        <!-- تحديد موضع الأيقونة بالجهة اليسرى بشكل ثابت وأنيق -->
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                            <i id="idStatusIcon" data-lucide="fingerprint" class="w-5 h-5 text-slate-600 transition-colors duration-300"></i>
+                        </div>
+                    </div>
+                    <!-- حقل التنبيه بالخطأ -->
+                    <p id="idError" class="text-rose-400 text-xs mt-1.5 hidden flex items-center gap-1.5 animate-fadeIn">
+                        <i data-lucide="alert-circle" class="w-4 h-4"></i>
+                        يرجى كتابة 7 أرقام على الأقل لاستخراج تاريخ الميلاد.
+                    </p>
+                </div>
+
+                <!-- حقل كود الطالب -->
+                <div class="space-y-2">
+                    <label for="studentCode" class="text-xs md:text-sm font-semibold text-slate-300 flex items-center gap-2">
+                        <i data-lucide="user" class="w-4 h-4 text-indigo-400"></i>
+                        كود الطالب
+                    </label>
+                    <div class="relative flex items-center rounded-2xl bg-slate-950/40 border border-white/5 transition-all duration-300 premium-focus-ring">
+                        <input 
+                            type="number" 
+                            id="studentCode" 
+                            placeholder="أدخل كود الطالب الخاص بك" 
+                            class="w-full bg-transparent pl-12 pr-4 py-3.5 text-white outline-none text-sm md:text-base font-bold placeholder:text-slate-500 placeholder:font-normal text-right transition-all"
+                            oninput="onFormChange()"
+                        >
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                            <i id="codeStatusIcon" data-lucide="key" class="w-5 h-5 text-slate-600 transition-colors duration-300"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- زر الاستخراج اليدوي -->
+                <button 
+                    id="btnSubmit" 
+                    onclick="triggerManualProcessing()"
+                    class="btn-glow w-full py-3.5 px-6 bg-gradient-to-r from-indigo-600 via-blue-600 to-indigo-600 hover:scale-[1.01] active:scale-[0.99] text-white font-bold rounded-2xl shadow-[0_4px_20px_rgba(99,102,241,0.25)] hover:shadow-[0_10px_30px_rgba(99,102,241,0.4)] transition-all duration-300 flex items-center justify-center gap-3 text-sm md:text-base cursor-pointer group"
+                >
+                    <span>استخراج فوري للحساب</span>
+                    <i data-lucide="sparkles" class="w-5 h-5 text-indigo-200 animate-bounce"></i>
+                </button>
+
+                <!-- رسالة تحذيرية منسقة للتحقق -->
+                <div id="customAlert" class="hidden p-4 bg-rose-500/10 border border-rose-500/20 text-rose-300 rounded-2xl text-xs md:text-sm flex items-start gap-3 animate-fadeIn">
+                    <i data-lucide="info" class="w-5 h-5 shrink-0 text-rose-400"></i>
+                    <div id="alertMessage" class="font-medium leading-relaxed">يرجى التأكد من ملء جميع الحقول بشكل صحيح.</div>
+                </div>
+
+                <!-- قسم النتائج السحري التفاعلي ذو حركية الظهور المتدرجة والخلابة -->
+                <div id="resultSection" class="hidden space-y-4 pt-5 border-t border-white/5">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></div>
+                        <h3 class="text-xs font-bold text-emerald-400 uppercase tracking-widest">
+                            تم استخراج البيانات بنجاح:
+                        </h3>
+                    </div>
+
+                    <!-- خانة البريد الإلكتروني المستخرج بتأثير ثلاثي الأبعاد -->
+                    <div class="space-y-1.5 reveal-animation" style="animation-delay: 0.1s;">
+                        <span class="text-xs font-semibold text-slate-400">الحساب الموحد المستخرج</span>
+                        <div class="flex items-center gap-2 p-1.5 rounded-2xl bg-slate-950/85 border border-white/5 hover:border-indigo-500/30 transition-all duration-300 shadow-inner">
+                            <div id="emailValue" class="flex-1 px-3 py-2.5 text-left font-mono text-xs md:text-sm tracking-wide break-all select-all text-indigo-200 overflow-x-auto scrollbar-hidden whitespace-nowrap">
+                                -
+                            </div>
+                            <button onclick="copyToClipboard('emailValue', this)" class="p-2.5 bg-indigo-500/10 hover:bg-indigo-500/25 text-indigo-400 hover:text-white rounded-xl border border-indigo-500/10 hover:border-indigo-500/30 transition-all duration-300 shrink-0 flex items-center justify-center cursor-pointer group" title="نسخ البريد">
+                                <i data-lucide="copy" class="w-4.5 h-4.5 group-hover:scale-110 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- خانة كلمة المرور المستخرجة -->
+                    <div class="space-y-1.5 reveal-animation" style="animation-delay: 0.2s;">
+                        <span class="text-xs font-semibold text-slate-400">كلمة المرور الافتراضية (Std# + تاريخ الميلاد)</span>
+                        <div class="flex items-center gap-2 p-1.5 rounded-2xl bg-slate-950/85 border border-white/5 hover:border-emerald-500/30 transition-all duration-300 shadow-inner">
+                            <div id="passwordValue" class="flex-1 px-3 py-2.5 text-left font-mono text-xs md:text-sm tracking-widest select-all text-emerald-300">
+                                -
+                            </div>
+                            <button onclick="copyToClipboard('passwordValue', this)" class="p-2.5 bg-emerald-500/10 hover:bg-emerald-500/25 text-emerald-400 hover:text-white rounded-xl border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300 shrink-0 flex items-center justify-center cursor-pointer group" title="نسخ كلمة المرور">
+                                <i data-lucide="copy" class="w-4.5 h-4.5 group-hover:scale-110 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- بطاقة الإرشاد الذهبية والملكية لأرقام الجلوس -->
+        <div class="glass-luxury rounded-[2rem] p-5 md:p-8 border border-amber-500/10 bg-gradient-to-br from-amber-500/5 to-transparent relative overflow-hidden transition-all duration-500 hover:border-amber-500/20 shadow-lg group">
+            
+            <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl pointer-events-none transition-all duration-500 group-hover:bg-amber-500/10"></div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-4 relative z-10">
+                <div class="p-3.5 bg-amber-500/10 rounded-2xl border border-amber-500/20 text-amber-400 shrink-0 group-hover:scale-105 transition-transform duration-300">
+                    <i data-lucide="award" class="w-7 h-7"></i>
+                </div>
+                <div class="space-y-1 text-center md:text-right flex-1">
+                    <h4 class="text-xs md:text-base font-extrabold text-amber-200">الاستعلام المباشر عن أرقام الجلوس</h4>
+                    <p class="text-[11px] md:text-xs text-slate-400 leading-relaxed max-w-sm">
+                        يمكن استخدام حسابك الموحد للحصول علي رقم جلوسك من الموقع الرسمي للوزارة من هنا.
+                    </p>
+                </div>
+                <a 
+                    href="https://moe-register.emis.gov.eg/login" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="btn-glow w-full md:w-auto px-5 py-3 bg-amber-500 hover:bg-amber-400 active:scale-[0.98] text-slate-950 font-black rounded-xl text-xs flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] whitespace-nowrap"
+                >
+                    <span>البوابة الرسمية للوزارة</span>
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- تذييل الصفحة -->
+        <p class="text-center text-[10px] text-slate-600 font-medium tracking-wide">
+            أمان كامل بنسبة 100% • تتم جميع العمليات داخلياً بشكل مشفر وفوري دون الحاجة لخوادم خارجية.
+        </p>
+    </div>
+
+    <!-- إشعار توست المنبثق العلوي فائق النعومة والجمال -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900/90 backdrop-blur-md border border-emerald-500/30 text-emerald-300 px-6 py-3.5 rounded-full text-xs font-semibold shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center gap-2.5 opacity-0 pointer-events-none transform translate-y-2 transition-all duration-500 z-50">
+        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 animate-bounce"></i>
+        <span>تم نسخ النص المختار إلى الحافظة بنجاح!</span>
+    </div>
+
+    <script>
+        // تفعيل الأيقونات
+        lucide.createIcons();
+
+        // دالة مراقبة حقول الاستمارة ديناميكياً لتفعيل الذكاء اللحظي
+        function onFormChange() {
+            const idInput = document.getElementById('nationalId');
+            const codeInput = document.getElementById('studentCode');
+            const idValue = idInput.value.trim();
+            const codeValue = codeInput.value.trim();
+            const badge = document.getElementById('idLengthBadge');
+            const error = document.getElementById('idError');
+            const idStatusIcon = document.getElementById('idStatusIcon');
+            const codeStatusIcon = document.getElementById('codeStatusIcon');
+            const alertBox = document.getElementById('customAlert');
+
+            alertBox.classList.add('hidden');
+
+            // تحديث الشارة بالعدد الحالي
+            badge.textContent = `${idValue.length} / 14 رقماً`;
+
+            // التحقق من صحة الرقم القومي ولونه
+            if (idValue.length > 0) {
+                if (idValue.length < 7) {
+                    badge.classList.remove('text-emerald-400', 'bg-emerald-500/10', 'border-emerald-500/20');
+                    badge.classList.add('text-rose-400', 'bg-rose-500/10', 'border-rose-500/20');
+                    error.classList.remove('hidden');
+                    idStatusIcon.className = "w-5 h-5 text-rose-400 transition-colors duration-300";
+                    idStatusIcon.setAttribute('data-lucide', 'shield-alert');
+                } else {
+                    badge.classList.remove('text-rose-400', 'bg-rose-500/10', 'border-rose-500/20');
+                    badge.classList.add('text-emerald-400', 'bg-emerald-500/10', 'border-emerald-500/20');
+                    error.classList.add('hidden');
+                    idStatusIcon.className = "w-5 h-5 text-emerald-400 transition-colors duration-300";
+                    idStatusIcon.setAttribute('data-lucide', 'shield-check');
+                }
+            } else {
+                badge.className = "text-[10px] font-extrabold text-slate-500 bg-slate-900 px-2.5 py-1 rounded-full border border-white/5 transition-all duration-300";
+                error.classList.add('hidden');
+                idStatusIcon.className = "w-5 h-5 text-slate-600 transition-colors duration-300";
+                idStatusIcon.setAttribute('data-lucide', 'fingerprint');
+            }
+
+            // التحقق من كود الطالب وتغيير لونه للحصول على مظهر ممتاز
+            if (codeValue.length > 0) {
+                codeStatusIcon.className = "w-5 h-5 text-emerald-400 transition-colors duration-300";
+                codeStatusIcon.setAttribute('data-lucide', 'check-square');
+            } else {
+                codeStatusIcon.className = "w-5 h-5 text-slate-600 transition-colors duration-300";
+                codeStatusIcon.setAttribute('data-lucide', 'key');
+            }
+
+            lucide.createIcons();
+
+            // التحديث اللحظي للبيانات دون الحاجة للضغط على زر "تأكيد"
+            if (idValue.length >= 7 && codeValue.length > 0) {
+                processAndGenerate(idValue, codeValue);
+            } else {
+                document.getElementById('resultSection').classList.add('hidden');
+            }
+        }
+
+        // تحفيز المعالجة اليدوية مع إظهار أخطاء مخصصة إن وجدت
+        function triggerManualProcessing() {
+            const idValue = document.getElementById('nationalId').value.trim();
+            const codeValue = document.getElementById('studentCode').value.trim();
+            const resultSection = document.getElementById('resultSection');
+
+            if (!idValue || !codeValue) {
+                showPremiumAlert("برجاء إدخال الرقم القومي وكود الطالب أولاً لإظهار النتائج.");
+                resultSection.classList.add('hidden');
+                return;
+            }
+
+            if (idValue.length < 7) {
+                showPremiumAlert("عذراً! يجب كتابة أول 7 أرقام على الأقل من الرقم القومي لتوليد كلمة المرور بدقة تامة.");
+                resultSection.classList.add('hidden');
+                return;
+            }
+
+            processAndGenerate(idValue, codeValue);
+        }
+
+        // المعالجة الأساسية وتشكيل البيانات المستخرجة بدقة تامة
+        function processAndGenerate(nationalId, studentCode) {
+            const resultSection = document.getElementById('resultSection');
+
+            // قراءة ذكية تفاعلية للرقم القومي:
+            // نتجاوز الرقم الأول ونأخذ الـ 6 أرقام التالية مباشرة
+            const birthCode = nationalId.substring(1, 7);
+
+            // تشكيل البيانات بدقة فائقة
+            const formattedEmail = `${studentCode}@benisuef2.moe.edu.eg`;
+            const formattedPassword = `Std#${birthCode}`;
+
+            // إدراج النصوص في الخانات
+            document.getElementById('emailValue').textContent = formattedEmail;
+            document.getElementById('passwordValue').textContent = formattedPassword;
+
+            // إظهار قسم النتائج بسلاسة فائقة وحركية ممتعة
+            if (resultSection.classList.contains('hidden')) {
+                resultSection.classList.remove('hidden');
+                resultSection.classList.add('reveal-animation');
+                
+                // تمرير خفيف وسلس للغاية لضمان عدم حدوث إزعاج للمستخدم
+                setTimeout(() => {
+                    resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 150);
+            }
+
+            lucide.createIcons();
+        }
+
+        // إظهار تنبيهات الواجهة الفخمة المتناسقة
+        function showPremiumAlert(msg) {
+            const alertBox = document.getElementById('customAlert');
+            const alertMsg = document.getElementById('alertMessage');
+            alertMsg.textContent = msg;
+            alertBox.classList.remove('hidden');
+            alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // آلية نسخ الحافظة المتطورة والمتوافقة تماماً
+        function copyToClipboard(elementId, btn) {
+            const textToCopy = document.getElementById(elementId).textContent.trim();
+            const tempInput = document.createElement('textarea');
+            tempInput.value = textToCopy;
+            tempInput.style.position = 'fixed';
+            tempInput.style.opacity = '0';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showNotificationToast();
+                    
+                    // تحويل مؤقت رائع لزر النسخ لتأكيد إتمام العملية
+                    const originalContent = btn.innerHTML;
+                    btn.innerHTML = `<i data-lucide="check" class="w-4.5 h-4.5 text-emerald-400 animate-bounce"></i>`;
+                    btn.classList.add('bg-emerald-600/20', 'border-emerald-500/30');
+                    btn.classList.remove('bg-indigo-500/10', 'border-indigo-500/10');
+                    lucide.createIcons();
+
+                    setTimeout(() => {
+                        btn.innerHTML = originalContent;
+                        btn.classList.remove('bg-emerald-600/20', 'border-emerald-500/30');
+                        btn.classList.add('bg-indigo-500/10', 'border-indigo-500/10');
+                        lucide.createIcons();
+                    }, 2000);
+                } else {
+                    alert('فشلت محاولة النسخ التلقائية، يرجى القيام بذلك يدوياً.');
+                }
+            } catch (err) {
+                console.error("خطأ أثناء محاولة النسخ التلقائي:", err);
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // إظهار تنبيه توست العائم الفاخر من الأسفل
+        function showNotificationToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+                toast.classList.remove('opacity-100', 'translate-y-0');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
